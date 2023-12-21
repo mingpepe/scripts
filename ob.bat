@@ -14,7 +14,7 @@ if defined name (
 	for /L %%i in (0, 1, 2) do (
 		if exist !arr[%%i]! (
 			start !arr[%%i]!
-			break
+			goto :break
 		)
 	)
 ) else (
@@ -24,8 +24,9 @@ if defined name (
 	for /L %%i in (0, 1, 2) do (
 		if exist !arr[%%i]! (
 			start !arr[%%i]!
-			break
+			goto :break
 		)
 	)
 )
+:break
 endlocal
